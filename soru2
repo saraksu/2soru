@@ -1,0 +1,18 @@
+import java.util.Scanner
+
+fun main(){
+    val scanner = Scanner(System.`in`)
+    println("Faktöriyelini hesaplamak istediğimiz değeri girin")
+    val sayi=scanner.nextInt()
+
+    var faktoriyel = 1
+    var hesaplama = "" // hesaplama değişkeni
+    for (i in 1..sayi){
+        faktoriyel *=i
+
+        hesaplama += if( i== 1) "$i" else "x $i"
+    }
+
+    println("$sayi! = $hesaplama = $faktoriyel")
+    scanner.close()
+}
